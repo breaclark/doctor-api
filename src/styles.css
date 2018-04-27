@@ -30,6 +30,10 @@ h5 {
   margin-top: 10px;
 }
 
+#body {
+  display: none;
+}
+
 img {
   height: 100%
 }

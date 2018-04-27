@@ -65,8 +65,13 @@ $(document).ready(function() {
   $("#nav-toggle").hover(function() {
     $("#hidden-nav").slideDown(1000);
   });
+
   $(".navbar").on("mouseleave", function() {
     $("#hidden-nav").slideUp(1200);
+  });
+
+  $("#body-btn").click(function() {
+    $("#body").slideToggle();
   });
 
   $("#doctor-search").submit(function(event){
