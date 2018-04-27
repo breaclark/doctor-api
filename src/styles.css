@@ -2,6 +2,29 @@ body {
   background-color: #7FDBFF;
 }
 
+.navbar {
+  width: 70px;
+  border-radius: 35px;
+  margin: 10px;
+}
+
+.navbar img,a {
+  float: left;
+  margin-left: -7px;
+}
+
+#hidden-nav, .label {
+  display: none;
+}
+
+.logos {
+  width: 35px;
+}
+
+.container {
+  margin-left: 100px;
+}
+
 img {
   height: 100%
 }

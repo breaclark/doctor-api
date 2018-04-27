@@ -19,14 +19,6 @@ let displayData = function (doctors) {
         newPatients = "Not accepting new patients";
       }
 
-//       <div class="card" style="width: 18rem;">
-//   <img class="card-img-top" src="..." alt="Card image cap">
-//   <div class="card-body">
-//     <h5 class="card-title">Card title</h5>
-//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//     <a href="#" class="btn btn-primary">Go somewhere</a>
-//   </div>
-// </div>
       $("#result").append(
       `<div class="card">
         <div class="row">
@@ -69,6 +61,14 @@ let errorMessage = function(error) {
 }
 
 $(document).ready(function() {
+
+  $("#nav-toggle").hover(function() {
+    $("#hidden-nav").slideDown(1000);
+  });
+  $(".navbar").on("mouseleave", function() {
+    $("#hidden-nav").slideUp(1200);
+  });
+
   $("#doctor-search").submit(function(event){
     let getData = new GetData();
     let issue = "query=" + $("#issue-input").val() + "&";
