@@ -8,6 +8,10 @@ let displayData = function (doctors) {
   if (doctors.data.length > 0) {
     $("#result").empty();
     for (let i = 0; i < doctors.data.length; i ++) {
+      let doctorWebsite = doctors.data[i].practices[0].website;
+      if (typeof doctorWebsite  === "undefined") {
+        doctorWebsite = "No website available";
+      }
       $("#result").append(
       `<ul>
         <li>
@@ -20,10 +24,10 @@ let displayData = function (doctors) {
           ${doctors.data[i].practices[0].phones[0].number}
         </li>
         <li>
-          ${doctors.data[i].practices[0].website}//if undefined put something else here
+          ${doctorWebsite}
         </li>
         <li>
-          ${doctors.data[i].practices[0].accepts_new_patients}
+          Accepting new patients: ${doctors.data[i].practices[0].accepts_new_patients}
         </li>
       </ul>`);
     }
