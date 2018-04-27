@@ -40,13 +40,13 @@
             <input class="form-control" type="text" id="doctor-input" placeholder="Doctor Name">
             <div class="input-group-append">
               <button type="submit" name="button" class="btn btn-outline-secondary">Search</button>
-              <button type="button" id="body-btn" class="btn btn-outline-secondary">Use the outline</button>
+              <button type="button" id="body-btn" class="btn btn-outline-secondary">Point out the affected area</button>
             </div>
           </div>
         </div>
       </form>
       <div id="body">
-        <img src="img/body.png" alt="body" usemap="#bodymap">
+        <img id="body-img" src="img/body.png" alt="body" usemap="#bodymap">
         <map name="bodymap">
           <area class="body-parts" shape="rect" coords="70,10,120,65" title="Head">
           <area class="body-parts" shape="rect" coords="75,65,110,85" title="Neck">
@@ -67,6 +67,8 @@
           <area class="body-parts" shape="rect" coords="75,430,120,450" title="Ankle">
           <area class="body-parts" shape="rect" coords="65,450,135,475" title="Foot">
         </map>
+      </div>
+      <div id="search-reminder">
       </div>
       <div id="result">
       </div>

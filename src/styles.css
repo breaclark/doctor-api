@@ -34,6 +34,10 @@ h5 {
   display: none;
 }
 
+#body-img {
+  margin-left: 30%;
+}
+
 img {
   height: 100%
 }

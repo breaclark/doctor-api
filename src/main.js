@@ -80,6 +80,15 @@ $(document).ready(function() {
 
   $("#doctor-search").submit(function(event){
     $("#body").slideUp();
+    let reminderIssue = $("#issue-input").val();
+    let reminderDoctorName = $("#doctor-input").val();
+    if (reminderIssue != "") {
+      reminderIssue =  "Issue: " + reminderIssue;
+    }
+    if (reminderDoctorName != "") {
+      reminderDoctorName =  "Doctor Name: " + reminderDoctorName;
+    }
+    $("#search-reminder").text("Search for " + reminderIssue + "  " + reminderDoctorName);
     let getData = new GetData();
     let issue = "query=" + $("#issue-input").val() + "&";
     let doctorName = "name=" + $("#doctor-input").val() + "&";
