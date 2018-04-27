@@ -18,24 +18,44 @@ let displayData = function (doctors) {
       } else {
         newPatients = "Not accepting new patients";
       }
+
+//       <div class="card" style="width: 18rem;">
+//   <img class="card-img-top" src="..." alt="Card image cap">
+//   <div class="card-body">
+//     <h5 class="card-title">Card title</h5>
+//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//     <a href="#" class="btn btn-primary">Go somewhere</a>
+//   </div>
+// </div>
       $("#result").append(
-      `<ul>
-        <li>
-          ${doctors.data[i].profile.first_name} ${doctors.data[i].profile.last_name}
-        </li>
-        <li>
-          ${doctors.data[i].practices[0].visit_address.street},    ${doctors.data[i].practices[0].visit_address.city}, ${doctors.data[i].practices[0].visit_address.state}
-        </li>
-        <li>
-          ${doctors.data[i].practices[0].phones[0].number}
-        </li>
-        <li>
-          ${doctorWebsite}
-        </li>
-        <li>
-          ${newPatients}
-        </li>
-      </ul>`);
+      `<div class="card">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+                ${doctors.data[i].profile.first_name} ${doctors.data[i].profile.last_name}
+              </h5>
+              <ul class="card-text">
+                <li>
+                  ${doctors.data[i].practices[0].visit_address.street},    ${doctors.data[i].practices[0].visit_address.city}, ${doctors.data[i].practices[0].visit_address.state}
+                </li>
+                <li>
+                  ${doctors.data[i].practices[0].phones[0].number}
+                </li>
+                <li>
+                  ${doctorWebsite}
+                </li>
+                <li>
+                  ${newPatients}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src=${doctors.data[i].profile.image_url} alt="Card image cap">
+          </div>
+        </div>
+      </div>`);
     }
   } else {
     $("#result").empty();
@@ -51,7 +71,6 @@ let errorMessage = function(error) {
 $(document).ready(function() {
   $("#doctor-search").submit(function(event){
     let getData = new GetData();
-
     let issue = "query=" + $("#issue-input").val() + "&";
     let doctorName = "name=" + $("#doctor-input").val() + "&";
     if ($("#issue-input").val()  === "") {
@@ -63,5 +82,5 @@ $(document).ready(function() {
     $("#doctor-search")[0].reset();
     getData.apiCaller(issue, doctorName, displayData, errorMessage);
     event.preventDefault();
-  })
+  });
 });
