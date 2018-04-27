@@ -7,14 +7,11 @@
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Program can take in a keyword for a medical issue and display a list of doctors in the Portland area that fit that keyword search | "nose" | [["Michael", "Scott", "123 Internet Lane", "(555)879-2901", "www.doctormichael.com", "Accepting new patients"],["Jerry", "Williams", "124 Internet Lane", "(555)649-9012", "www.doctorjerry.com", "Not accepting new patients"],...] |
+| Program can take in a doctor's name and display a list of doctors in the Portland area that fit that name search | "Michael" | [["Michael", "Scott", "123 Internet Lane", "(555)879-2901", "www.doctormichael.com", "Accepting new patients"],["Jerry", "Michaels", "124 Internet Lane", "(555)649-9012", "www.doctorjerry.com", "Not accepting new patients"],...] |
+| Program can take in a search and return a fitting notification if there is an error with the API Call| "nose" | "A 404 error occured, please try your search again later" |
+| Program can take in a search and return a fitting notification if no doctors meet the that search criteria | "Xavier" | "No doctors met the criteria for that search, please try again" |
+
 
 
 ## Setup/Installation Requirements
