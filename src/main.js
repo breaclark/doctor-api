@@ -52,8 +52,15 @@ $(document).ready(function() {
   $("#doctor-search").submit(function(event){
     let getData = new GetData();
 
-    let issue = "query=" + $("#issue-input").val();
-    let doctorName = $("#doctor-input").val();
+    let issue = "query=" + $("#issue-input").val() + "&";
+    let doctorName = "name=" + $("#doctor-input").val() + "&";
+    if ($("#issue-input").val()  === "") {
+      issue = "";
+    }
+    if ($("#doctor-input").val()  === "") {
+      doctorName = "";
+    }
+    $("#doctor-search")[0].reset();
     getData.apiCaller(issue, doctorName, displayData, errorMessage);
     event.preventDefault();
   })
