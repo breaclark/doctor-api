@@ -34,9 +34,15 @@
       </nav>
       <form id="doctor-search">
         <h5>Please search by issue, doctor name, or both below</h5>
-        <input type="text" id="issue-input" placeholder="Issue">
-        <input type="text" id="doctor-input" placeholder="Doctor Name">
-        <button type="submit" name="button">Search</button>
+        <div class="btn-group">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="issue-input" placeholder="Issue">
+            <input class="form-control" type="text" id="doctor-input" placeholder="Doctor Name">
+            <div class="input-group-append">
+              <button type="submit" name="button" class="btn btn-outline-secondary">Search</button>
+            </div>
+          </div>
+        </div>
       </form>
       <div id="result">
       </div>
