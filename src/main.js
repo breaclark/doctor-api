@@ -53,7 +53,8 @@ $(document).ready(function() {
     let getData = new GetData();
 
     let issue = "query=" + $("#issue-input").val();
-    getData.apiCaller(issue, displayData, errorMessage);
+    let doctorName = $("#doctor-input").val();
+    getData.apiCaller(issue, doctorName, displayData, errorMessage);
     event.preventDefault();
   })
 });
