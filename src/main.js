@@ -6,7 +6,7 @@ import { GetData } from './api.js'
 
 let displayData = function (doctors) {
   $("#result").empty();
-  $("#result").text(doctors);
+  $("#result").text(doctors.data[0].profile.first_name + " " + doctors.data[0].profile.last_name);
 }
 
 $(document).ready(function() {
