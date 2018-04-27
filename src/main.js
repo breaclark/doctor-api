@@ -79,6 +79,7 @@ $(document).ready(function() {
   })
 
   $("#doctor-search").submit(function(event){
+    $("#body").slideUp();
     let getData = new GetData();
     let issue = "query=" + $("#issue-input").val() + "&";
     let doctorName = "name=" + $("#doctor-input").val() + "&";
