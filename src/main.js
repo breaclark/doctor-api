@@ -48,6 +48,11 @@ let errorMessage = function(error) {
 }
 
 $(document).ready(function() {
-  let getData = new GetData();
-  getData.apiCaller(displayData, errorMessage);
+  $("#doctor-search").submit(function(event){
+    let getData = new GetData();
+
+    let issue = $("#issue").val()
+    getData.apiCaller(issue, displayData, errorMessage);
+    event.preventDefault();
+  })
 });
