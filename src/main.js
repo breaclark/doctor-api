@@ -7,7 +7,24 @@ import { GetData } from './api.js'
 let displayData = function (doctors) {
   $("#result").empty();
   for (let i = 0; i < doctors.data.length; i ++) {
-    $("#result").append(doctors.data[i].profile.first_name + " " + doctors.data[i].profile.last_name);
+    $("#result").append(
+    `<ul>
+      <li>
+        ${doctors.data[i].profile.first_name} ${doctors.data[i].profile.last_name}
+      </li>
+      <li>
+        ${doctors.data[i].practices[0].visit_address.street}    ${doctors.data[i].practices[0].visit_address.city}, ${doctors.data[i].practices[0].visit_address.state}
+      </li>
+      <li>
+        ${doctors.data[i].practices[0].phones[0].number}
+      </li>
+      <li>
+        ${doctors.data[i].practices[0].website}//if undefined put something else here
+      </li>
+      <li>
+        ${doctors.data[i].practices[0].accepts_new_patients}
+      </li>
+    </ul>`);
   }
 }
 
