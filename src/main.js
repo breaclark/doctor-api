@@ -12,6 +12,12 @@ let displayData = function (doctors) {
       if (typeof doctorWebsite  === "undefined") {
         doctorWebsite = "No website available";
       }
+      let newPatients = doctors.data[i].practices[0].accepts_new_patients;
+      if (newPatients === true) {
+        newPatients = "Accepting new patients";
+      } else {
+        newPatients = "Not accepting new patients";
+      }
       $("#result").append(
       `<ul>
         <li>
@@ -27,7 +33,7 @@ let displayData = function (doctors) {
           ${doctorWebsite}
         </li>
         <li>
-          Accepting new patients: ${doctors.data[i].practices[0].accepts_new_patients}
+          ${newPatients}
         </li>
       </ul>`);
     }
