@@ -38,6 +38,7 @@ let displayData = function (doctors) {
       </ul>`);
     }
   } else {
+    $("#result").empty();
     $("#result").append(`<p>No doctors matched that search, please try again</p>`);
   }
 }
@@ -51,7 +52,7 @@ $(document).ready(function() {
   $("#doctor-search").submit(function(event){
     let getData = new GetData();
 
-    let issue = $("#issue").val()
+    let issue = $("#issue-input").val();
     getData.apiCaller(issue, displayData, errorMessage);
     event.preventDefault();
   })
