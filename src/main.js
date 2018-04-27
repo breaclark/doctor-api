@@ -18,7 +18,7 @@ let displayData = function (doctors) {
           ${doctors.data[i].profile.first_name} ${doctors.data[i].profile.last_name}
         </li>
         <li>
-          ${doctors.data[i].practices[0].visit_address.street}    ${doctors.data[i].practices[0].visit_address.city}, ${doctors.data[i].practices[0].visit_address.state}
+          ${doctors.data[i].practices[0].visit_address.street},    ${doctors.data[i].practices[0].visit_address.city}, ${doctors.data[i].practices[0].visit_address.state}
         </li>
         <li>
           ${doctors.data[i].practices[0].phones[0].number}
@@ -36,7 +36,12 @@ let displayData = function (doctors) {
   }
 }
 
+let errorMessage = function(error) {
+  $("#result").empty();
+  $("#result").append(`There seems to be a ${error.status} error, ${error.statusText}`);
+}
+
 $(document).ready(function() {
   let getData = new GetData();
-  getData.apiCaller(displayData);
+  getData.apiCaller(displayData, errorMessage);
 });
