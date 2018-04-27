@@ -52,7 +52,7 @@ $(document).ready(function() {
   $("#doctor-search").submit(function(event){
     let getData = new GetData();
 
-    let issue = $("#issue-input").val();
+    let issue = "query=" + $("#issue-input").val();
     getData.apiCaller(issue, displayData, errorMessage);
     event.preventDefault();
   })
