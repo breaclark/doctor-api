@@ -8,7 +8,7 @@ class GetData {
       displayData(response);
       console.log(response);
     }).fail(function(error) {
-      console.log(error);
+      console.log(`There seems to be a ${error.status} error, ${error.statusText}`);
     })
   }
 }
