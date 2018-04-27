@@ -5,8 +5,8 @@ import './styles.css';
 import { GetData } from './api.js'
 
 let displayData = function (doctors) {
-  $().empty();
-  $().text(doctors);
+  $("#result").empty();
+  $("#result").text(doctors);
 }
 
 $(document).ready(function() {
