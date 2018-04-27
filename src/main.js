@@ -74,6 +74,10 @@ $(document).ready(function() {
     $("#body").slideToggle();
   });
 
+  $(".body-parts").click(function() {
+    $("#issue-input").val(this.title);
+  })
+
   $("#doctor-search").submit(function(event){
     let getData = new GetData();
     let issue = "query=" + $("#issue-input").val() + "&";
