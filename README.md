@@ -2,7 +2,7 @@
 
 #### A website that uses the BetterDoctor API and practices the use of promises and ui/logic separation. You can see it in action at  https://breatortilla.github.io/doctor-api/
 
-#### By **Brea Borlas**
+#### By **Brea Clark**
 
 ### Specs
 | Spec | Input | Output |
@@ -42,4 +42,4 @@ _Email me at breatortilla@gmail.com for support_
 
 ### License
 
-Copyright (c) 2018 **_{Brea Borlas}_**
+Copyright (c) 2018 **Brea Clark**
