@@ -1,6 +1,6 @@
 # Doctor API Project
 
-#### A website that uses the BetterDoctor API and practices the use of promises and ui/logic separation. You can see it in action at  https://breatortilla.github.io/doctor-api/
+#### A website that uses the BetterDoctor API and practices the use of promises and ui/logic separation. You can see it in action at  https://breaclark.github.io/doctor-api/
 
 #### By **Brea Clark**
 
